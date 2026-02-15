@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr"> <head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Au Cœur du Quartier Latin</title> <link rel="stylesheet" href="style.css">   </head>
+    <title>Au Cœur du Quartier Latin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" style="color:#c0392b; border-bottom: 2px solid #c0392b;">Accueil</a></li>
             <li><a href="pantheon.html">Panthéon</a></li>
             <li><a href="sorbonne.html">Sorbonne</a></li>
             <li><a href="jardin.html">Jardin</a></li>
@@ -16,25 +19,74 @@
     </nav>
 
     <main>
-        <header>
-            <h1>Bienvenue au Cœur du Quartier Latin</h1>
-            <p>Un parcours culturel pour découvrir la vie étudiante parisienne.</p>
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 2.5em; margin-bottom: 10px;">Le Quartier Latin</h1>
+            <p style="font-size: 1.2em; color: #666;">
+                Le cœur historique et intellectuel de Paris.
+            </p>
         </header>
 
         <section>
-            <h2>Votre Mission</h2>
-            <p>
-                Ce site n'est pas un guide touristique classique. 
-                C'est une invitation à comprendre l'histoire et la vie quotidienne 
-                du quartier le plus célèbre de Paris.
+            <h2>Pourquoi ce parcours ?</h2>
+
             </p>
-            <a href="pantheon.html" class="btn">Commencer la visite →</a>
+            <ul style="margin-bottom: 0; padding-left: 20px;">
+                <li><strong>Découvrir</strong> l'histoire cachée derrière les monuments.</li>
+                <li><strong>Pratiquer</strong> votre français avec des textes adaptés.</li>
+                <li><strong>Comprendre</strong> la vie étudiante parisienne d'hier et d'aujourd'hui.</li>
+            </ul>
         </section>
+
+        <section>
+            <h2>Comment ça marche ?</h2>
+        
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+                <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid #2c3e50;">
+                    <h3 style="font-size: 1.1em;">1. Lisez</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Découvrez chaque lieu grâce à une courte présentation.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid #d4ac0d;">
+                    <h3 style="font-size: 1.1em;">2. Observez</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Regardez les photos pour repérer les détails architecturaux.</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid #c0392b;">
+                    <h3 style="font-size: 1.1em;">3. Validez</h3>
+                    <p style="font-size: 0.9em; margin: 0;">Répondez au quiz final pour tester vos connaissances.</p>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <p style="font-weight: bold; font-size: 1.1em;">Prêt à commencer l'exploration ?</p>
+            <a href="pantheon.html" class="btn" style="padding: 15px 40px; font-size: 1.2em;">
+                Démarrer la visite →
+            </a>
+        </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 WANG Yingjie - Master MEEF</p>
+        <p>&copy; 2026 WANG Yingjie - Master MEEF (Projet Web)</p>
     </footer>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">&uarr;</button>
 
+    <script>
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    
+    </body> </html>
 </body>
 </html>

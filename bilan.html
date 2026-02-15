@@ -7,40 +7,170 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="pantheon.html">Panthéon</a></li>
             <li><a href="sorbonne.html">Sorbonne</a></li>
             <li><a href="jardin.html">Jardin</a></li>
-            <li><a href="bilan.html" style="color:#f1c40f;">Bilan</a></li>
+            <li><a href="bilan.html" style="color:#c0392b; border-bottom: 2px solid #c0392b;">Bilan</a></li>
         </ul>
     </nav>
 
     <main>
-        <section>
-            <h1>Avez-vous bien suivi ?</h1>
-            <p>Vérifions ensemble ce que vous avez retenu de cette promenade.</p>
+        <article>
+            <header style="border-bottom: 2px solid #eee; margin-bottom: 30px; padding-bottom: 10px;">
+                <h1 style="font-size: 2em; color: #2c3e50;">Bilan de la visite</h1>
+                <p style="font-style: italic; color: #7f8c8d;">Révisons ensemble avant de nous quitter.</p>
+            </header>
 
-            <form>
-                <p><strong>1. Quelle est la devise inscrite sur le Panthéon ?</strong></p>
-                <input type="radio" name="q1" id="q1a"> <label for="q1a">Liberté, Égalité, Fraternité</label><br>
-                <input type="radio" name="q1" id="q1b"> <label for="q1b">Aux grands hommes, la patrie reconnaissante</label><br>
+            <section style="margin-bottom: 40px;">
+                <h2 style="font-size: 1.5em; color: #2980b9;">📌 Ce qu'il faut retenir</h2>
+                <p>Voici les 3 points clés de notre promenade :</p>
                 
-                <p><strong>2. Comment les étudiants surnomment-ils le Jardin du Luxembourg ?</strong></p>
-                <input type="radio" name="q2" id="q2a"> <label for="q2a">Le Luco</label><br>
-                <input type="radio" name="q2" id="q2b"> <label for="q2b">Le Lux</label><br>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+                    <div style="flex: 1; min-width: 250px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; border-top: 4px solid #c0392b;">
+                        <h3 style="margin-top: 0; font-size: 1.2em;">🏛️ Le Panthéon</h3>
+                        <p style="font-size: 0.95em; color: #555;">Un temple laïque pour la mémoire républicaine. C'est ici que reposent Victor Hugo et Marie Curie.</p>
+                    </div>
 
-                <br>
-                <button type="button" class="btn" onclick="alert('Bravo ! Vous avez terminé le parcours.')">Valider mes réponses</button>
-            </form>
-            
-            <p style="margin-top: 20px;"><a href="index.html">← Retour à l'accueil</a></p>
-        </section>
+                    <div style="flex: 1; min-width: 250px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; border-top: 4px solid #f1c40f;">
+                        <h3 style="margin-top: 0; font-size: 1.2em;">🎓 La Sorbonne</h3>
+                        <p style="font-size: 0.95em; color: #555;">Le symbole du savoir depuis le Moyen Âge. Le nom "Quartier Latin" vient de la langue qu'on y parlait.</p>
+                    </div>
+
+                    <div style="flex: 1; min-width: 250px; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 15px; border-top: 4px solid #27ae60;">
+                        <h3 style="margin-top: 0; font-size: 1.2em;">🌳 Le Jardin</h3>
+                        <p style="font-size: 0.95em; color: #555;">Le "Luco" est le lieu de détente des étudiants. Il abrite aussi le Sénat et une Statue de la Liberté.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+            <section>
+                <h2 style="font-size: 1.5em; color: #e67e22;">🧠 Quiz final</h2>
+                <p>Avez-vous bien tout lu ? Testez vos connaissances !</p>
+
+                <form id="quizForm" style="margin-top: 20px; background: #f9f9f9; padding: 25px; border-radius: 12px;">
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-bottom: 10px;">1. Quelle est la devise du Panthéon ?</p>
+                        <label style="display: block; margin-bottom: 8px; cursor: pointer;">
+                            <input type="radio" name="q1" id="q1a" value="faux"> Liberté, Égalité, Fraternité
+                        </label>
+                        <label style="display: block; cursor: pointer;">
+                            <input type="radio" name="q1" id="q1b" value="vrai"> Aux grands hommes, la patrie reconnaissante
+                        </label>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-bottom: 10px;">2. Pourquoi le Quartier Latin s'appelle-t-il ainsi ?</p>
+                        <label style="display: block; margin-bottom: 8px; cursor: pointer;">
+                            <input type="radio" name="q2" id="q2a" value="vrai"> Parce qu'on y parlait latin à l'université
+                        </label>
+                        <label style="display: block; cursor: pointer;">
+                            <input type="radio" name="q2" id="q2b" value="faux"> Parce que les Romains y habitaient
+                        </label>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: bold; margin-bottom: 10px;">3. Quelle statue célèbre se cache dans le Jardin ?</p>
+                        <label style="display: block; margin-bottom: 8px; cursor: pointer;">
+                            <input type="radio" name="q3" id="q3a" value="faux"> La Vénus de Milo
+                        </label>
+                        <label style="display: block; cursor: pointer;">
+                            <input type="radio" name="q3" id="q3b" value="vrai"> La Statue de la Liberté
+                        </label>
+                    </div>
+
+                    <button type="button" class="btn" onclick="verifierReponses()" style="width: 100%; font-size: 1.1em; margin-top: 10px;">
+                        Valider mes réponses
+                    </button>
+                </form>
+
+                <div id="resultat" style="display:none; margin-top: 20px; padding: 20px; border-radius: 8px; text-align: center; border: 2px solid transparent;">
+                    <h3 id="scoreTitle" style="margin:0; font-size: 1.5em;"></h3>
+                    <p id="scoreMessage" style="margin-top: 10px; font-size: 1.1em;"></p>
+                </div>
+            </section>
+
+            <section style="margin-top: 50px; font-size: 0.9em; color: #666; background: #f0f2f5; padding: 20px; border-radius: 8px;">
+                <h4 style="margin-top: 0; color: #444;">🔗 Pour aller plus loin</h4>
+                <p>Vous voulez visiter ces lieux en vrai ? Voici les sites officiels :</p>
+                <ul style="padding-left: 20px;">
+                    <li><a href="https://www.paris-pantheon.fr/" target="_blank" style="color: #2980b9;">Site officiel du Panthéon</a></li>
+                    <li><a href="https://www.sorbonne.fr/" target="_blank" style="color: #2980b9;">Découvrir la Sorbonne</a></li>
+                    <li><a href="https://www.senat.fr/visite/" target="_blank" style="color: #2980b9;">Visiter le Sénat et le Jardin</a></li>
+                </ul>
+            </section>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="jardin.html" style="text-decoration: none; color: #7f8c8d;">← Retour au Jardin</a>
+                <a href="index.html" class="btn" style="background: #27ae60;">Retour à l'accueil 🏠</a>
+            </div>
+
+        </article>
     </main>
 
     <footer>
         <p>&copy; 2026 WANG Yingjie - Master MEEF</p>
     </footer>
+
+    <script>
+        function verifierReponses() {
+            let score = 0;
+            if(document.getElementById('q1b').checked) score++;
+            if(document.getElementById('q2a').checked) score++;
+            if(document.getElementById('q3b').checked) score++;
+
+            let resultatDiv = document.getElementById('resultat');
+            let title = document.getElementById('scoreTitle');
+            let msg = document.getElementById('scoreMessage');
+
+            resultatDiv.style.display = 'block';
+
+            if(score === 3) {
+                resultatDiv.style.backgroundColor = '#d4edda';
+                resultatDiv.style.borderColor = '#c3e6cb';
+                resultatDiv.style.color = '#155724';
+                title.innerHTML = "🏆 Bravo ! 3/3";
+                msg.innerHTML = "Excellent ! Vous connaissez le Quartier Latin par cœur.";
+            } else if(score === 2) {
+                resultatDiv.style.backgroundColor = '#fff3cd';
+                resultatDiv.style.borderColor = '#ffeeba';
+                resultatDiv.style.color = '#856404';
+                title.innerHTML = "Presque ! " + score + "/3";
+                msg.innerHTML = "C'est un bon score. Regardez bien la réponse fausse.";
+            } else {
+                resultatDiv.style.backgroundColor = '#f8d7da';
+                resultatDiv.style.borderColor = '#f5c6cb';
+                resultatDiv.style.color = '#721c24';
+                title.innerHTML = "Courage ! " + score + "/3";
+                msg.innerHTML = "Relisez les pages et réessayez, vous allez y arriver !";
+            }
+        }
+    </script>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">&uarr;</button>
+
+    <script>
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    
+    </body> </html>
 </body>
 </html>

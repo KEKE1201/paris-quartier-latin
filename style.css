@@ -124,3 +124,27 @@ footer {
     font-size: 0.9rem;
     font-family: 'Georgia', serif; /* 页脚也用衬线体，呼应标题 */
 }
+
+/* style.css - 回到顶部按钮 (极简版) */
+#scrollTopBtn {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: none; /* 关键：去掉背景色 */
+    color: #7f8c8d;   /* 使用柔和的深灰色 */
+    cursor: pointer;
+    padding: 0;       /* 去掉内边距 */
+    font-size: 32px;  /* 字体大一点，看起来更轻盈 */
+    opacity: 0.7;     /* 稍微透明一点，不刺眼 */
+    transition: all 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    color: #2c3e50; /* 鼠标放上去变深蓝色 */
+    opacity: 1;     /* 变得不透明 */
+    transform: translateY(-5px); /* 向上浮动效果 */
+}

@@ -7,36 +7,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="pantheon.html">Panthéon</a></li>
             <li><a href="sorbonne.html">Sorbonne</a></li>
-            <li><a href="jardin.html" style="color:#f1c40f;">Jardin</a></li>
+            <li><a href="jardin.html" style="color:#c0392b; border-bottom: 2px solid #c0392b;">Jardin</a></li>
             <li><a href="bilan.html">Bilan</a></li>
         </ul>
     </nav>
 
     <main>
         <article>
-            <h1>Le Jardin du Luxembourg</h1>
-            <img src="images/jardin.jpg" alt="Chaises vertes dans le jardin du Luxembourg">
-            
-            <p>
-                Après les cours, les étudiants se retrouvent souvent ici. Le <strong>"Luco"</strong>, comme on l'appelle,
-                est un espace de respiration au milieu de la ville.
-            </p>
-            <p>
-                On y vient pour lire sur les célèbres <strong>chaises vertes</strong>, réviser ses examens ou simplement discuter.
-                C'est un véritable <strong>lieu de vie sociale</strong> à ciel ouvert.
-            </p>
+            <header style="border-bottom: 2px solid #eee; margin-bottom: 20px; padding-bottom: 10px;">
+                <h1 style="font-size: 2em; color: #2c3e50;">Le Jardin du Luxembourg</h1>
+                <p style="font-style: italic; color: #7f8c8d;">Surnommé "Le Luco" par les Parisiens</p>
+            </header>
 
-            <a href="bilan.html" class="btn">Dernière étape : Le Bilan →</a>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+                
+                <figure style="margin: 0; flex: 1 1 300px;">
+                    <img src="images/jardin1.jpg" alt="Vue du Jardin du Luxembourg" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                </figure>
+
+                <figure style="margin: 0; flex: 1 1 300px;">
+                    <img src="images/jardin2.jpg" alt="Détail du jardin" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;">
+                </figure>
+
+            </div>
+            <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: -10px; margin-bottom: 30px;">
+                <em>Photos personnelles prises sur le terrain.</em>
+            </p>
+            
+            <section style="margin-top: 30px; font-size: 1.1em;">
+                <h3>📍 Présentation</h3>
+                <p>
+                    Après les cours à la Sorbonne, les étudiants viennent souvent ici pour faire une pause. 
+                    Le Jardin du Luxembourg est un grand parc public de 25 hectares. C'est un endroit calme pour lire, discuter ou manger un sandwich.
+                </p>
+                <p>
+                    Au fond du jardin, vous pouvez voir un grand palais : c'est le <strong>Sénat</strong>. 
+                    Ce n'est pas un musée, mais un lieu politique très important où les sénateurs votent les lois françaises.
+                </p>
+                <p>
+                    Le symbole du jardin, ce sont les célèbres <strong>chaises vertes</strong> en métal. 
+                    On peut les déplacer comme on veut pour s'asseoir au soleil autour du grand <strong>bassin</strong> central.
+                </p>
+            </section>
+
+            <div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3498db; margin: 30px 0;">
+                <h4 style="margin-top: 0; color: #2980b9; display: flex; align-items: center;">
+                    💡 Le saviez-vous ?
+                </h4>
+                <p style="margin-bottom: 0; font-size: 0.95em; color: #444;">
+                    Pas besoin d'aller à New York pour voir la <strong>Statue de la Liberté</strong> ! 
+                    Il y a une version miniature (plus petite) cachée dans ce jardin. C'est le sculpteur français Bartholdi qui a créé la statue originale offerte aux États-Unis.
+                </p>
+            </div>
+
+            <section style="background-color: #fff9c4; padding: 20px; border-radius: 8px; border-left: 5px solid #fbc02d; margin-top: 30px;">
+                <h3 style="margin-top: 0; color: #f57f17; font-size: 1.2em;">📖 Vocabulaire à retenir</h3>
+                <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                    <li><strong>🔹 Flâner :</strong> se promener tranquillement, sans but précis.</li>
+                    <li><strong>🔹 Le Sénat :</strong> assemblée politique qui représente les régions.</li>
+                    <li><strong>🔹 Un bassin :</strong> un grand point d'eau artificiel.</li>
+                    <li><strong>🔹 Se détendre :</strong> se reposer, se calmer après le travail.</li>
+                    <li><strong>🔹 Une chaise :</strong> un siège pour s'asseoir (ici, elles sont vertes !).</li>
+                </ul>
+            </section>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="sorbonne.html" style="text-decoration: none; color: #7f8c8d;">← Retour à la Sorbonne</a>
+                <a href="bilan.html" class="btn">Passer au Bilan →</a>
+            </div>
+
         </article>
     </main>
 
     <footer>
         <p>&copy; 2026 WANG Yingjie - Master MEEF</p>
     </footer>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">&uarr;</button>
+
+    <script>
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    
+    </body> </html>
 </body>
 </html>

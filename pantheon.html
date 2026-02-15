@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="pantheon.html" style="color:#f1c40f;">Panthéon</a></li> <li><a href="sorbonne.html">Sorbonne</a></li>
+            <li><a href="pantheon.html" style="color:#c0392b; border-bottom: 2px solid #c0392b;">Panthéon</a></li>
+            <li><a href="sorbonne.html">Sorbonne</a></li>
             <li><a href="jardin.html">Jardin</a></li>
             <li><a href="bilan.html">Bilan</a></li>
         </ul>
@@ -18,24 +20,84 @@
 
     <main>
         <article>
-            <h1>Le Panthéon</h1>
-            <img src="images/pantheon.jpg" alt="Façade du Panthéon à Paris"> 
-            
-            <p>
-                Situé au sommet de la montagne Sainte-Geneviève, le <strong>Panthéon</strong> est un monument incontournable.
-                À l'origine une église, il est devenu un <strong>temple républicain</strong> destiné à honorer les grands personnages de l'histoire de France.
-            </p>
-            <p>
-                Sur sa façade, vous pouvez lire la devise : <em>"Aux grands hommes, la patrie reconnaissante"</em>. 
-                C'est ici que reposent des personnalités comme <strong>Voltaire</strong>, <strong>Victor Hugo</strong> ou <strong>Marie Curie</strong>.
-            </p>
+            <header style="border-bottom: 2px solid #eee; margin-bottom: 20px; padding-bottom: 10px;">
+                <h1 style="font-size: 2em; color: #2c3e50;">Le Panthéon</h1>
+                <p style="font-style: italic; color: #7f8c8d;">"Aux grands hommes, la patrie reconnaissante"</p>
+            </header>
 
-            <a href="sorbonne.html" class="btn">Étape suivante : La Sorbonne →</a>
+            <figure style="margin: 0; text-align: center;">
+                <img src="images/pantheon.jpg" alt="Façade du Panthéon" style="max-height: 400px; object-fit: cover;">
+            </figure>
+            
+            <section style="margin-top: 30px; font-size: 1.1em;">
+                <h3>📍 Présentation</h3>
+                <p>
+                    Le Panthéon se trouve sur la montagne Sainte-Geneviève, au cœur du Quartier Latin. 
+                    Au départ, ce bâtiment est une église construite au XVIIIᵉ siècle. Après la Révolution française, 
+                    il devient un monument <strong>laïque</strong> : on y <strong>rend hommage à</strong> des personnes importantes de l’histoire de France.
+                </p>
+                <p>
+                    À l’intérieur, on peut visiter la nef et surtout la <strong>crypte</strong>. Dans la crypte, il y a les 
+                    <strong>tombeaux</strong> de plusieurs grandes figures, par exemple Voltaire, Rousseau, Victor Hugo, 
+                    Marie Curie ou Joséphine Baker.
+                </p>
+                <p>
+                    Sur la façade, on peut lire une phrase célèbre : <em>« Aux grands hommes, la patrie <strong>reconnaissante</strong> »</em>. 
+                    Elle signifie que la nation remercie celles et ceux qui ont marqué l’histoire.
+                    Aujourd’hui, le Panthéon est un lieu de visite, mais aussi un symbole : il parle de mémoire, de valeurs et d’identité.
+                </p>
+            </section>
+
+            <div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3498db; margin: 30px 0;">
+                <h4 style="margin-top: 0; color: #2980b9; display: flex; align-items: center;">
+                    💡 Le saviez-vous ?
+                </h4>
+                <p style="margin-bottom: 0; font-size: 0.95em; color: #444;">
+                    <strong>Marie Curie</strong>, célèbre scientifique (Prix Nobel de Physique et de Chimie), repose ici. 
+                    Elle a été la première femme à entrer au Panthéon pour ses propres mérites scientifiques.
+                </p>
+            </div>
+
+            <section style="background-color: #fff9c4; padding: 20px; border-radius: 8px; border-left: 5px solid #fbc02d; margin-top: 30px;">
+                <h3 style="margin-top: 0; color: #f57f17; font-size: 1.2em;">📖 Vocabulaire à retenir</h3>
+                <ul style="list-style-type: none; padding-left: 0; line-height: 1.8;">
+                    <li><strong>🔹 Laïque :</strong> qui n’est pas religieux.</li>
+                    <li><strong>🔹 Rendre hommage à :</strong> montrer du respect, honorer.</li>
+                    <li><strong>🔹 Une crypte :</strong> partie souterraine d’un bâtiment (souvent avec des tombeaux).</li>
+                    <li><strong>🔹 Un tombeau :</strong> endroit où une personne est enterrée.</li>
+                    <li><strong>🔹 Reconnaissante :</strong> qui dit merci, qui exprime de la gratitude.</li>
+                </ul>
+            </section>
+
+            <div style="text-align: right; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="sorbonne.html" class="btn">Aller à La Sorbonne →</a>
+            </div>
+
         </article>
     </main>
 
     <footer>
         <p>&copy; 2026 WANG Yingjie - Master MEEF</p>
     </footer>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">&uarr;</button>
+
+    <script>
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    
+    </body> </html>
 </body>
 </html>

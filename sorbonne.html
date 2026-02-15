@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="pantheon.html">Panthéon</a></li>
-            <li><a href="sorbonne.html" style="color:#f1c40f;">Sorbonne</a></li>
+            <li><a href="sorbonne.html" style="color:#c0392b; border-bottom: 2px solid #c0392b;">Sorbonne</a></li>
             <li><a href="jardin.html">Jardin</a></li>
             <li><a href="bilan.html">Bilan</a></li>
         </ul>
@@ -19,24 +20,68 @@
 
     <main>
         <article>
-            <h1>La Sorbonne</h1>
-            <img src="images/sorbonne.jpg" alt="La cour d'honneur de la Sorbonne">
-            
-            <p>
-                Juste à côté du Panthéon se trouve la <strong>Sorbonne</strong>, l'une des plus vieilles universités du monde (fondée en 1253).
-                Elle est le symbole de l'<strong>excellence académique</strong> française.
-            </p>
-            <p>
-                C'est le cœur de la vie étudiante du quartier. De nombreux écrivains et scientifiques y ont étudié.
-                Aujourd'hui, c'est un lieu de <strong>savoir</strong> et de rencontres internationales.
-            </p>
+            <header style="border-bottom: 2px solid #eee; margin-bottom: 20px; padding-bottom: 10px;">
+                <h1 style="font-size: 2em; color: #2c3e50;">La Sorbonne</h1>
+                <p style="font-style: italic; color: #7f8c8d;">Le cœur intellectuel de Paris depuis le Moyen Âge</p>
+            </header>
 
-            <a href="jardin.html" class="btn">Étape suivante : Le Jardin →</a>
+            <figure style="margin: 0; text-align: center;">
+                <img src="images/sorbonne.jpg" alt="La cour d'honneur de la Sorbonne" style="max-height: 400px; object-fit: cover;">
+                <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">L'entrée historique de l'université.</figcaption>
+            </figure>
+            
+            <section style="margin-top: 30px; font-size: 1.1em;">
+                <h3>📚 Une université légendaire</h3>
+                <p>
+                    Juste à côté du Panthéon se trouve la Sorbonne. Fondée en 1253, c'est l'une des <strong>plus vieilles universités du monde</strong>.
+                    Pendant des siècles, les étudiants venaient de toute l'Europe pour y apprendre la théologie, les arts et les sciences.
+                </p>
+
+                <h3>🎓 La vie étudiante aujourd'hui</h3>
+                <p>
+                    Aujourd'hui, le Quartier Latin porte ce nom car les étudiants y parlaient autrefois le <strong>latin</strong>.
+                    C'est encore un lieu très vivant avec de nombreuses bibliothèques, des cafés littéraires et des cinémas d'art et d'essai.
+                </p>
+
+                <div style="background-color: #fff8e1; padding: 15px; border-radius: 8px; border-left: 4px solid #f1c40f; margin: 20px 0;">
+                    <h4 style="margin-top: 0; color: #d35400;">📝 Vocabulaire utile</h4>
+                    <ul style="margin-bottom: 0; font-size: 0.95em;">
+                        <li><strong>Un amphithéâtre</strong> : une grande salle de cours.</li>
+                        <li><strong>La fac</strong> : abréviation familière pour "la faculté" (l'université).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="pantheon.html" style="text-decoration: none; color: #7f8c8d;">← Retour au Panthéon</a>
+                <a href="jardin.html" class="btn">Aller au Jardin du Luxembourg →</a>
+            </div>
+
         </article>
     </main>
 
     <footer>
         <p>&copy; 2026 WANG Yingjie - Master MEEF</p>
     </footer>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">&uarr;</button>
+
+    <script>
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    
+    </body> </html>
 </body>
 </html>
