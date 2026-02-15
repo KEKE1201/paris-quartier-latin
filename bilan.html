@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan - Quartier Latin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="pantheon.html">Panthéon</a></li>
+            <li><a href="sorbonne.html">Sorbonne</a></li>
+            <li><a href="jardin.html">Jardin</a></li>
+            <li><a href="bilan.html" style="color:#f1c40f;">Bilan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Avez-vous bien suivi ?</h1>
+            <p>Vérifions ensemble ce que vous avez retenu de cette promenade.</p>
+
+            <form>
+                <p><strong>1. Quelle est la devise inscrite sur le Panthéon ?</strong></p>
+                <input type="radio" name="q1" id="q1a"> <label for="q1a">Liberté, Égalité, Fraternité</label><br>
+                <input type="radio" name="q1" id="q1b"> <label for="q1b">Aux grands hommes, la patrie reconnaissante</label><br>
+                
+                <p><strong>2. Comment les étudiants surnomment-ils le Jardin du Luxembourg ?</strong></p>
+                <input type="radio" name="q2" id="q2a"> <label for="q2a">Le Luco</label><br>
+                <input type="radio" name="q2" id="q2b"> <label for="q2b">Le Lux</label><br>
+
+                <br>
+                <button type="button" class="btn" onclick="alert('Bravo ! Vous avez terminé le parcours.')">Valider mes réponses</button>
+            </form>
+            
+            <p style="margin-top: 20px;"><a href="index.html">← Retour à l'accueil</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WANG Yingjie - Master MEEF</p>
+    </footer>
+</body>
+</html>

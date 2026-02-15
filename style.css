@@ -1,0 +1,126 @@
+/* style.css V2.0 - 巴黎学术风格 */
+
+/* 1. 全局与字体 (Typography) */
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    color: #444; 
+    
+    /* --- 背景图核心代码 --- */
+    
+    /* 1. 这里填图片的路径 */
+   background-image: url('images/bg.jpg');
+    
+    /* 2. 让图片永远铺满屏幕，不会出现白边 */
+    background-size: cover; 
+    
+    /* 3. 图片位置居中 */
+    background-position: center; 
+    
+    /* 4. 关键特效：视差滚动 (Fixed) - 图片不动，文字动 */
+    background-attachment: fixed; 
+    
+    /* 5. 备用颜色 (万一图片加载失败显示这个灰) */
+    background-color: #333; 
+}
+
+/* 让所有标题使用衬线体 (Serif)，营造“历史/文化”的氛围 */
+h1, h2, h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #2c3e50; /* 深海军蓝 */
+    margin-top: 0;
+}
+
+/* 2. 导航栏 (Navigation) */
+nav {
+    background-color: #fff; /* 改成白色背景 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 加一点淡淡的投影 */
+    position: sticky; /* 这是一个很酷的功能：滚动时导航栏吸顶 */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* 菜单居中 */
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    transition: color 0.3s; /* 颜色变化要有过渡动画 */
+}
+
+/* 鼠标悬停时的效果 */
+nav a:hover {
+    color: #c0392b; /* 悬停变红色 */
+    border-bottom: 2px solid #c0392b; /* 下面出现红线 */
+}
+
+/* 3. 主要内容卡片 (Card Design) */
+main {
+    max-width: 800px;
+    margin: 40px auto; /* 上下留白更多 */
+    padding: 20px;
+}
+
+/* 给所有文章加一个白色卡片背景 */
+article, section, header {
+    background: white;
+    padding: 40px; /* 内部留白加大 */
+    border-radius: 12px; /* 圆角更大 */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* 高级感的投影 */
+    border-top: 5px solid #d4ac0d; /* 顶部加一条金线，提升质感 */
+    margin-bottom: 30px;
+}
+
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 4. 按钮样式 (The Button) */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* 渐变色背景 */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px; /* 胶囊形状 */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3); /* 按钮投影 */
+    transition: transform 0.2s, box-shadow 0.2s; /* 动画过渡 */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* 鼠标放上去，按钮会上浮 */
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+}
+
+/* 5. 页脚 */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    font-size: 0.9rem;
+    font-family: 'Georgia', serif; /* 页脚也用衬线体，呼应标题 */
+}
